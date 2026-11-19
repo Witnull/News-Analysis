@@ -1,0 +1,648 @@
+{
+  "Demand side": {
+    "Trends": {
+      "Consumer trend": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "Media-driven trend": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Industry trend": {
+        "duration": "mid",
+        "scope": "multi"
+      },
+      "Seasonal trend": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Generational trend": {
+        "duration": "long",
+        "scope": "single"
+      },
+      "Income-class trend": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "Religious/ethical trend": {
+        "duration": "long",
+        "scope": "single"
+      },
+      "Regional/geographic trend": {
+        "duration": "mid",
+        "scope": "single"
+      }
+    },
+    "National avg salary": {
+      "Wage growth": {
+        "duration": "mid",
+        "scope": "whole"
+      },
+      "Wage decline": {
+        "duration": "mid",
+        "scope": "whole"
+      },
+      "Purchasing power change": {
+        "duration": "mid",
+        "scope": "whole"
+      },
+      "Income inequality/distribution shift": {
+        "duration": "long",
+        "scope": "whole"
+      },
+      "Informal economy wage": {
+        "duration": "mid",
+        "scope": "multi"
+      },
+      "Remittance inflow": {
+        "duration": "mid",
+        "scope": "multi"
+      },
+      "Investment/dividend income": {
+        "duration": "mid",
+        "scope": "multi"
+      }
+    },
+    "Demography": {
+      "Population growth/decline": {
+        "duration": "long",
+        "scope": "whole"
+      },
+      "Age structure shift": {
+        "duration": "long",
+        "scope": "whole"
+      },
+      "Urban vs rural shift": {
+        "duration": "long",
+        "scope": "multi"
+      },
+      "Migration": {
+        "duration": "long",
+        "scope": "multi"
+      },
+      "Household size change": {
+        "duration": "long",
+        "scope": "multi"
+      },
+      "Gender ratio shift": {
+        "duration": "long",
+        "scope": "multi"
+      },
+      "Ethnic composition shift": {
+        "duration": "long",
+        "scope": "multi"
+      },
+      "Disability/health population change": {
+        "duration": "long",
+        "scope": "multi"
+      }
+    },
+    "Lifestyle/culture": {
+      "Habit change": {
+        "duration": "long",
+        "scope": "multi"
+      },
+      "Cultural/religious event": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Health/diet shift": {
+        "duration": "long",
+        "scope": "multi"
+      },
+      "Education level shift": {
+        "duration": "long",
+        "scope": "multi"
+      },
+      "Digital penetration": {
+        "duration": "long",
+        "scope": "multi"
+      },
+      "Tourism-driven demand": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "E-commerce adoption": {
+        "duration": "long",
+        "scope": "multi"
+      },
+      "Sharing economy adoption": {
+        "duration": "long",
+        "scope": "multi"
+      }
+    },
+    "Substitution": {
+      "Direct substitute price change": {
+        "duration": "short",
+        "scope": "multi"
+      },
+      "Complement price change": {
+        "duration": "short",
+        "scope": "multi"
+      },
+      "Cross-industry substitute": {
+        "duration": "long",
+        "scope": "multi"
+      },
+      "Self-production substitute": {
+        "duration": "long",
+        "scope": "single"
+      },
+      "Rental vs own substitution": {
+        "duration": "long",
+        "scope": "multi"
+      },
+      "Import substitution": {
+        "duration": "mid",
+        "scope": "multi"
+      },
+      "Generic vs branded substitution": {
+        "duration": "mid",
+        "scope": "single"
+      }
+    },
+    "Number of buyers": {
+      "New buyer entry": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "Buyer exit": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Buyer concentration": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "Buyer bargaining power shift": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "Group purchasing/co-op formation": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "Institutional buyer entry": {
+        "duration": "mid",
+        "scope": "single"
+      }
+    },
+    "Expectation": {
+      "Price expectation": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Shortage expectation": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Future demand forecast": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "Anticipatory buying before policy change": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Expectation of tech disruption": {
+        "duration": "mid",
+        "scope": "single"
+      }
+    },
+    "Other": {
+      "Unclassified demand factor": {
+        "duration": "mid",
+        "scope": "single"
+      }
+    }
+  },
+  "Supply side": {
+    "Technology": {
+      "New production method": {
+        "duration": "long",
+        "scope": "single"
+      },
+      "Automation/efficiency upgrade": {
+        "duration": "long",
+        "scope": "single"
+      },
+      "Tech breakthrough": {
+        "duration": "long",
+        "scope": "multi"
+      },
+      "Tech transfer/licensing": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "Tech obsolescence": {
+        "duration": "long",
+        "scope": "single"
+      },
+      "Patent expiry": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "R&D investment change": {
+        "duration": "mid",
+        "scope": "single"
+      }
+    },
+    "Productivity/capacity": {
+      "Capacity expansion": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "Capacity cut/closure": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "Utilization rate change": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Yield change": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Planned maintenance shutdown": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Strategic reserve release/drawdown": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Capacity relocation": {
+        "duration": "long",
+        "scope": "single"
+      },
+      "Vertical integration": {
+        "duration": "long",
+        "scope": "multi"
+      }
+    },
+    "Value chain": {
+      "Input price change": {
+        "duration": "short",
+        "scope": "multi"
+      },
+      "Transportation problem": {
+        "duration": "short",
+        "scope": "multi"
+      },
+      "Logistics bottleneck": {
+        "duration": "short",
+        "scope": "multi"
+      },
+      "Labor cost/shortage": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "Producer financing/credit access": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "Single-source supplier risk": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "Resource constraint": {
+        "duration": "long",
+        "scope": "multi"
+      },
+      "FX pass-through on input": {
+        "duration": "short",
+        "scope": "multi"
+      },
+      "Packaging material cost": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Shipping insurance cost": {
+        "duration": "short",
+        "scope": "multi"
+      }
+    },
+    "Number of sellers/market structure": {
+      "New entrant": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "Seller exit/bankruptcy": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "Consolidation": {
+        "duration": "long",
+        "scope": "single"
+      },
+      "Cartel/coordination": {
+        "duration": "long",
+        "scope": "single"
+      },
+      "State-owned enterprise intervention": {
+        "duration": "long",
+        "scope": "single"
+      },
+      "Informal/black market supply": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "Joint venture formation": {
+        "duration": "long",
+        "scope": "single"
+      }
+    },
+    "Expectation": {
+      "Producer price expectation": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Input cost forecast": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Pre-emptive stockpiling by producer": {
+        "duration": "short",
+        "scope": "single"
+      }
+    },
+    "Other": {
+      "Unclassified supply factor": {
+        "duration": "mid",
+        "scope": "single"
+      }
+    }
+  },
+  "Objective event": {
+    "Exogenous shock": {
+      "Natural disaster": {
+        "duration": "short",
+        "scope": "multi"
+      },
+      "Disease/epidemic": {
+        "duration": "mid",
+        "scope": "multi"
+      },
+      "Weather anomaly": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Accident": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Volcanic/geological event": {
+        "duration": "short",
+        "scope": "multi"
+      },
+      "Lockdown/movement restriction": {
+        "duration": "mid",
+        "scope": "whole"
+      },
+      "Infrastructure failure": {
+        "duration": "short",
+        "scope": "multi"
+      },
+      "Space weather": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Terrorism attack": {
+        "duration": "short",
+        "scope": "single"
+      }
+    },
+    "Macro condition": {
+      "Inflation/deflation": {
+        "duration": "long",
+        "scope": "whole"
+      },
+      "Business cycle phase": {
+        "duration": "long",
+        "scope": "whole"
+      },
+      "Interest rate environment": {
+        "duration": "long",
+        "scope": "whole"
+      },
+      "Currency/exchange rate move": {
+        "duration": "mid",
+        "scope": "whole"
+      },
+      "Social behavior shift": {
+        "duration": "mid",
+        "scope": "multi"
+      },
+      "Commodity super-cycle": {
+        "duration": "long",
+        "scope": "multi"
+      },
+      "Credit crunch/liquidity crisis": {
+        "duration": "mid",
+        "scope": "whole"
+      },
+      "Sovereign debt crisis": {
+        "duration": "long",
+        "scope": "whole"
+      },
+      "Labor force shrinkage": {
+        "duration": "long",
+        "scope": "whole"
+      },
+      "Asset bubble/crash": {
+        "duration": "mid",
+        "scope": "whole"
+      },
+      "Trade balance shift": {
+        "duration": "long",
+        "scope": "whole"
+      }
+    }
+  },
+  "Policy change": {
+    "New policy": {
+      "Tax/subsidy": {
+        "duration": "long",
+        "scope": "multi"
+      },
+      "Tariff/trade restriction": {
+        "duration": "long",
+        "scope": "multi"
+      },
+      "Regulation": {
+        "duration": "long",
+        "scope": "multi"
+      },
+      "Export/import ban or quota": {
+        "duration": "mid",
+        "scope": "multi"
+      },
+      "Monetary policy": {
+        "duration": "long",
+        "scope": "whole"
+      },
+      "Industrial policy": {
+        "duration": "long",
+        "scope": "multi"
+      },
+      "Land use/zoning policy": {
+        "duration": "long",
+        "scope": "single"
+      },
+      "Public health policy": {
+        "duration": "mid",
+        "scope": "multi"
+      },
+      "Immigration/visa policy": {
+        "duration": "long",
+        "scope": "whole"
+      },
+      "Antitrust/competition policy": {
+        "duration": "long",
+        "scope": "single"
+      }
+    },
+    "Policy risk": {
+      "Pending legislation": {
+        "duration": "mid",
+        "scope": "multi"
+      },
+      "Political instability": {
+        "duration": "long",
+        "scope": "whole"
+      },
+      "Sanctions": {
+        "duration": "long",
+        "scope": "multi"
+      },
+      "Geopolitical conflict": {
+        "duration": "long",
+        "scope": "whole"
+      },
+      "Policy reversal": {
+        "duration": "long",
+        "scope": "multi"
+      },
+      "International agreement withdrawal": {
+        "duration": "long",
+        "scope": "whole"
+      },
+      "Referendum/election outcome risk": {
+        "duration": "mid",
+        "scope": "whole"
+      },
+      "Central bank independence risk": {
+        "duration": "long",
+        "scope": "whole"
+      }
+    }
+  },
+  "Self-entity": {
+    "Ethic problem": {
+      "Fraud": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Labor violation": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Environmental violation": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "Data breach/privacy violation": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Animal welfare violation": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Bribery/corruption": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "IP theft/counterfeiting": {
+        "duration": "short",
+        "scope": "single"
+      }
+    },
+    "New product": {
+      "Launch": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Product recall": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Regulatory approval/certification": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "Rebranding/repositioning": {
+        "duration": "mid",
+        "scope": "single"
+      }
+    },
+    "Default/debt": {
+      "Loan default": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Bond default": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Debt restructuring": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "Credit rating change": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Insolvency/liquidation": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "Foreign-currency debt mismatch risk": {
+        "duration": "mid",
+        "scope": "single"
+      }
+    },
+    "Drama": {
+      "Leadership change/scandal": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Legal dispute/lawsuit": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "Internal conflict": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Cybersecurity breach": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "PR crisis": {
+        "duration": "short",
+        "scope": "single"
+      },
+      "Succession crisis": {
+        "duration": "mid",
+        "scope": "single"
+      },
+      "Whistleblower event": {
+        "duration": "short",
+        "scope": "single"
+      }
+    }
+  }
+}

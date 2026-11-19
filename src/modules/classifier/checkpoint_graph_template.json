@@ -1,0 +1,554 @@
+{
+  "schema": {
+    "node": {
+      "id": "string",
+      "sub_industry": "string",
+      "stage": "string",
+      "description": "string",
+      "embedding_id": "string"
+    },
+    "edge": {
+      "from_node": "string",
+      "to_node": "string",
+      "relation": "upstream_downstream|substitute|complement|macro_link"
+    }
+  },
+  "macro_layer": {
+    "nodes": [
+      {
+        "id": "macro_fx",
+        "description": "currency/exchange rate"
+      },
+      {
+        "id": "macro_rate",
+        "description": "interest rate environment"
+      },
+      {
+        "id": "macro_inflation",
+        "description": "inflation/deflation"
+      },
+      {
+        "id": "macro_credit",
+        "description": "credit/liquidity condition"
+      },
+      {
+        "id": "macro_geopolitical",
+        "description": "sanctions, war, trade bloc shift"
+      },
+      {
+        "id": "macro_trade_tariff",
+        "description": "tariffs, import export duties, retaliatory tariffs, trade restrictions"
+      }
+    ],
+    "link_rule": "each macro node links to every sub_industry chain's 'input_cost' or 'financing' checkpoint"
+  },
+  "sub_industries": {
+    "rice_agriculture": {
+      "checkpoints": [
+        {
+          "stage": "input",
+          "description": "seed, fertilizer, farm credit"
+        },
+        {
+          "stage": "cultivation",
+          "description": "planting, growing, harvest"
+        },
+        {
+          "stage": "processing",
+          "description": "milling"
+        },
+        {
+          "stage": "storage_trading",
+          "description": "warehouse, commodity trading"
+        },
+        {
+          "stage": "export_distribution",
+          "description": "export terminal, wholesale distribution"
+        },
+        {
+          "stage": "retail",
+          "description": "retail sale"
+        },
+        {
+          "stage": "consumer",
+          "description": "end consumer"
+        }
+      ],
+      "cross_edges": [
+        {
+          "to": "livestock_feed.input",
+          "relation": "substitute_input"
+        },
+        {
+          "to": "macro_fx",
+          "relation": "macro_link"
+        }
+      ]
+    },
+    "iron_steel_mineral": {
+      "checkpoints": [
+        {
+          "stage": "exploration",
+          "description": "ore exploration, licensing"
+        },
+        {
+          "stage": "extraction",
+          "description": "mining"
+        },
+        {
+          "stage": "processing",
+          "description": "smelting, beneficiation"
+        },
+        {
+          "stage": "refining",
+          "description": "steelmaking, alloying"
+        },
+        {
+          "stage": "distribution",
+          "description": "logistics, trading"
+        },
+        {
+          "stage": "manufacturing_use",
+          "description": "construction, auto, machinery input"
+        },
+        {
+          "stage": "consumer",
+          "description": "end use product"
+        }
+      ],
+      "cross_edges": [
+        {
+          "to": "logistics.shipping",
+          "relation": "upstream_downstream"
+        },
+        {
+          "to": "macro_rate",
+          "relation": "macro_link"
+        }
+      ]
+    },
+    "semiconductor": {
+      "checkpoints": [
+        {
+          "stage": "design_ip",
+          "description": "chip design, IP licensing"
+        },
+        {
+          "stage": "fabrication",
+          "description": "wafer fab, foundry"
+        },
+        {
+          "stage": "assembly_test",
+          "description": "packaging, testing"
+        },
+        {
+          "stage": "distribution",
+          "description": "component distribution"
+        },
+        {
+          "stage": "oem_integration",
+          "description": "device manufacturer use"
+        },
+        {
+          "stage": "consumer",
+          "description": "end device"
+        }
+      ],
+      "cross_edges": [
+        {
+          "to": "macro_geopolitical",
+          "relation": "macro_link"
+        }
+      ]
+    },
+    "oil_gas": {
+      "checkpoints": [
+        {
+          "stage": "upstream",
+          "description": "exploration, extraction"
+        },
+        {
+          "stage": "midstream",
+          "description": "pipeline, storage, shipping"
+        },
+        {
+          "stage": "refining",
+          "description": "refinery processing"
+        },
+        {
+          "stage": "downstream_distribution",
+          "description": "fuel distribution"
+        },
+        {
+          "stage": "consumer",
+          "description": "end use, retail fuel"
+        }
+      ],
+      "cross_edges": [
+        {
+          "to": "macro_geopolitical",
+          "relation": "macro_link"
+        },
+        {
+          "to": "macro_fx",
+          "relation": "macro_link"
+        }
+      ]
+    },
+    "logistics": {
+      "checkpoints": [
+        {
+          "stage": "freight_capacity",
+          "description": "vessel/truck/rail capacity"
+        },
+        {
+          "stage": "port_handling",
+          "description": "port congestion, customs"
+        },
+        {
+          "stage": "warehousing",
+          "description": "storage, cold-chain"
+        },
+        {
+          "stage": "last_mile",
+          "description": "final delivery"
+        }
+      ],
+      "cross_edges": [
+        {
+          "to": "macro_fx",
+          "relation": "macro_link"
+        }
+      ]
+    },
+    "software_services": {
+      "checkpoints": [
+        {
+          "stage": "r_and_d_design",
+          "description": "software architecture, AI model training, algorithm development, codebase licensing"
+        },
+        {
+          "stage": "cloud_infrastructure",
+          "description": "cloud data centers, compute servers, CDN content delivery networks, web hosting, network infrastructure"
+        },
+        {
+          "stage": "platform_dev",
+          "description": "APIs, developer platforms, enterprise SaaS platforms, operating systems, database management"
+        },
+        {
+          "stage": "cybersecurity_operations",
+          "description": "cybersecurity monitoring, threat detection, IT security administration, data encryption"
+        },
+        {
+          "stage": "enterprise_client",
+          "description": "enterprise client adoption, commercial software deployment, corporate IT integration"
+        },
+        {
+          "stage": "consumer",
+          "description": "end-user digital devices, consumer apps, mobile applications"
+        }
+      ],
+      "cross_edges": [
+        {
+          "to": "semiconductor.oem_integration",
+          "relation": "upstream_downstream"
+        }
+      ]
+    },
+    "banking_finance": {
+      "checkpoints": [
+        {
+          "stage": "funding_deposits",
+          "description": "capital raising, retail deposits, interbank liquidity, central bank lending facilities"
+        },
+        {
+          "stage": "debt_underwriting",
+          "description": "loan origination, bond issuance, debt restructuring, credit facility underwriting"
+        },
+        {
+          "stage": "trading_clearing",
+          "description": "securities trading, exchange order matching, derivatives clearing, market making"
+        },
+        {
+          "stage": "asset_management",
+          "description": "wealth management, pension fund asset allocation, investment portfolio, private equity"
+        },
+        {
+          "stage": "borrower_consumer",
+          "description": "corporate borrower credit, commercial real estate loans, retail consumer mortgages"
+        }
+      ],
+      "cross_edges": [
+        {
+          "to": "macro_credit",
+          "relation": "macro_link"
+        },
+        {
+          "to": "macro_rate",
+          "relation": "macro_link"
+        }
+      ]
+    },
+    "power_energy": {
+      "checkpoints": [
+        {
+          "stage": "generation",
+          "description": "renewable wind and solar power plants, thermal power stations, hydroelectric dams, nuclear power"
+        },
+        {
+          "stage": "transmission_grid",
+          "description": "high-voltage power transmission grid, national power lines, electrical substations"
+        },
+        {
+          "stage": "distribution_storage",
+          "description": "battery energy storage systems (BESS), local power distribution, electric utilities"
+        },
+        {
+          "stage": "consumer",
+          "description": "commercial and industrial power consumers, residential electricity users"
+        }
+      ],
+      "cross_edges": [
+        {
+          "to": "oil_gas.refining",
+          "relation": "complement"
+        }
+      ]
+    },
+    "pharma_biotech": {
+      "checkpoints": [
+        {
+          "stage": "drug_discovery",
+          "description": "target identification, peptide synthesis, molecular biology, pre-clinical laboratory research"
+        },
+        {
+          "stage": "clinical_trials",
+          "description": "phase I-III human clinical trials, patient cohorts, drug safety and efficacy testing"
+        },
+        {
+          "stage": "regulatory_review",
+          "description": "FDA and health ministry regulatory approval, medical oversight, pharmaceutical certification"
+        },
+        {
+          "stage": "commercial_manufacturing",
+          "description": "GMP active pharmaceutical ingredient (API) synthesis, sterile drug formulation, medical packaging"
+        },
+        {
+          "stage": "pharmacy_patient",
+          "description": "hospital and pharmacy prescription distribution, clinical patient therapy"
+        }
+      ],
+      "cross_edges": [
+        {
+          "to": "macro_geopolitical",
+          "relation": "macro_link"
+        }
+      ]
+    },
+    "agri_biotech_feed": {
+      "checkpoints": [
+        {
+          "stage": "raw_inputs",
+          "description": "organic waste, black soldier fly larvae (BSFL) breeding, enzyme cultures, biochar raw inputs"
+        },
+        {
+          "stage": "bioprocessing",
+          "description": "pyrolysis furnace, thermal treatment, fermentation, insect protein extraction, animal feed formulation"
+        },
+        {
+          "stage": "livestock_aquaculture",
+          "description": "commercial livestock farms, poultry and swine farming, aquaculture feed ponds"
+        }
+      ],
+      "cross_edges": [
+        {
+          "to": "rice_agriculture.cultivation",
+          "relation": "substitute_input"
+        }
+      ]
+    },
+    "poultry_swine": {
+      "checkpoints": [
+        {
+          "stage": "breeding_genetics",
+          "description": "grandparent breeding stock, hatcheries, piglet genetics"
+        },
+        {
+          "stage": "commercial_farming",
+          "description": "grow-out livestock barns, feedlots, animal health, biosecurity"
+        },
+        {
+          "stage": "slaughter_processing",
+          "description": "abattoirs, meat processing, cold chain freezing"
+        },
+        {
+          "stage": "distribution_retail",
+          "description": "wholesale meat markets, retail supermarkets, food service"
+        }
+      ],
+      "cross_edges": [
+        {
+          "to": "agri_biotech_feed.livestock_aquaculture",
+          "relation": "upstream_downstream"
+        }
+      ]
+    },
+    "aquaculture": {
+      "checkpoints": [
+        {
+          "stage": "hatchery_fry",
+          "description": "broodstock, larvae hatcheries, shrimp post-larvae, fingerlings"
+        },
+        {
+          "stage": "grow_out_farming",
+          "description": "aquaculture ponds, cages, aerators, water quality management"
+        },
+        {
+          "stage": "seafood_processing",
+          "description": "freezing, filleting, packing facilities, export certification"
+        },
+        {
+          "stage": "export_distribution",
+          "description": "cold chain shipping, international seafood trade, domestic wet markets"
+        }
+      ],
+      "cross_edges": [
+        {
+          "to": "agri_biotech_feed.livestock_aquaculture",
+          "relation": "upstream_downstream"
+        }
+      ]
+    },
+    "fertilizer": {
+      "checkpoints": [
+        {
+          "stage": "chemical_feedstock",
+          "description": "natural gas feedstock, phosphate rock, potash imports, ammonia"
+        },
+        {
+          "stage": "synthesis_granulation",
+          "description": "urea synthesis, NPK granulation, DAP chemical plants"
+        },
+        {
+          "stage": "wholesale_dealers",
+          "description": "regional distribution depots, agricultural supply dealers"
+        },
+        {
+          "stage": "farm_application",
+          "description": "crop fertilization, soil nutrient management, farming cooperatives"
+        }
+      ],
+      "cross_edges": [
+        {
+          "to": "oil_gas.refining",
+          "relation": "upstream_downstream"
+        }
+      ]
+    },
+    "coal_energy": {
+      "checkpoints": [
+        {
+          "stage": "extraction_mining",
+          "description": "open-pit coal mining, underground seams, coal washing plants"
+        },
+        {
+          "stage": "coal_logistics",
+          "description": "rail bulk freight, coal terminal ports, barging"
+        },
+        {
+          "stage": "thermal_generation",
+          "description": "pulverized coal boilers, thermal power plants, fly ash handling"
+        },
+        {
+          "stage": "grid_offtake",
+          "description": "transmission grid interconnection, electricity utility offtake"
+        }
+      ],
+      "cross_edges": [
+        {
+          "to": "power_energy.generation",
+          "relation": "substitute"
+        }
+      ]
+    },
+    "textile_apparel": {
+      "checkpoints": [
+        {
+          "stage": "raw_fiber",
+          "description": "cotton farming, polyester and nylon synthetic petrochemical fibers"
+        },
+        {
+          "stage": "yarn_spinning_weaving",
+          "description": "spinning mills, textile weaving, knitting, fabric dyeing and finishing"
+        },
+        {
+          "stage": "garment_assembly",
+          "description": "cut-make-trim factories, garment assembly, sewing labor"
+        },
+        {
+          "stage": "brand_retail_export",
+          "description": "export forwarders, fashion brand buyers, retail distribution"
+        }
+      ],
+      "cross_edges": [
+        {
+          "to": "logistics.shipping",
+          "relation": "upstream_downstream"
+        }
+      ]
+    },
+    "electronics_manufacturing": {
+      "checkpoints": [
+        {
+          "stage": "electronic_components",
+          "description": "printed circuit boards, passive components, connectors, display panels"
+        },
+        {
+          "stage": "ems_assembly",
+          "description": "surface-mount technology, contract electronics manufacturing, assembly robotics"
+        },
+        {
+          "stage": "testing_packaging",
+          "description": "functional QA testing, box packaging, final hardware assembly"
+        },
+        {
+          "stage": "global_oem_channel",
+          "description": "consumer tech brands, retail electronics distribution, telecom carriers"
+        }
+      ],
+      "cross_edges": [
+        {
+          "to": "semiconductor.oem_integration",
+          "relation": "upstream_downstream"
+        }
+      ]
+    },
+    "construction_materials": {
+      "checkpoints": [
+        {
+          "stage": "raw_quarrying",
+          "description": "limestone quarries, clay pits, aggregate sand and gravel dredging"
+        },
+        {
+          "stage": "kiln_manufacturing",
+          "description": "clinker rotary kilns, cement grinding plants, brick and float glass manufacturing"
+        },
+        {
+          "stage": "concrete_distribution",
+          "description": "ready-mix batching plants, regional building material warehouses"
+        },
+        {
+          "stage": "construction_sites",
+          "description": "infrastructure civil engineering, commercial contractors, residential development"
+        }
+      ],
+      "cross_edges": [
+        {
+          "to": "iron_steel_mineral.distribution",
+          "relation": "complement"
+        }
+      ]
+    }
+  },
+  "placeholder_sub_industries": []
+}

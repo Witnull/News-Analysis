@@ -1,0 +1,18 @@
+# Install with Python 3.12. Model weights are configured separately.
+alembic>=1.13
+beautifulsoup4>=4.12
+chromadb>=1.0
+colorama>=0.4
+ddgs>=9
+feedparser>=6
+huggingface-hub>=0.28
+llama-cpp-python>=0.3
+neo4j>=5.26
+networkx>=3.4
+python-dotenv>=1.0
+requests>=2.32
+rich>=13
+scrapling[fetchers]>=0.4.9
+sqlalchemy>=2.0
+tqdm>=4.66
+trafilatura>=2.0

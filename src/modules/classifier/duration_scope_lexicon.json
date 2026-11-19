@@ -1,0 +1,82 @@
+{
+  "duration_override": {
+    "short": [
+      "temporary",
+      "one-off",
+      "one-time",
+      "this week",
+      "this quarter",
+      "short-term",
+      "immediate",
+      "brief",
+      "one day",
+      "overnight",
+      "transient"
+    ],
+    "mid": [
+      "this year",
+      "several months",
+      "for months",
+      "medium-term",
+      "next few quarters",
+      "through the year"
+    ],
+    "long": [
+      "permanent",
+      "indefinite",
+      "structural",
+      "for years",
+      "long-term",
+      "until further notice",
+      "ongoing",
+      "perpetual",
+      "multi-year",
+      "decade"
+    ]
+  },
+  "scope_override": {
+    "single": [
+      "this company",
+      "the firm",
+      "one producer",
+      "specific plant",
+      "single factory"
+    ],
+    "multi": [
+      "also affects",
+      "spills over",
+      "related sector",
+      "substitute market",
+      "upstream supplier",
+      "downstream buyer",
+      "neighboring industry"
+    ],
+    "whole": [
+      "economy-wide",
+      "all sectors",
+      "nationwide",
+      "across industries",
+      "broad-based",
+      "market-wide",
+      "every sector"
+    ]
+  },
+  "tense_hint": {
+    "future_ongoing": [
+      "will implement",
+      "starting next year",
+      "to be phased in",
+      "plans to",
+      "set to begin"
+    ],
+    "past_concluded": [
+      "has resolved",
+      "has lifted",
+      "was lifted",
+      "ended on",
+      "concluded",
+      "expired on"
+    ]
+  },
+  "usage_note": "Check duration_override and scope_override first (regex/spaCy match). If no hit, check tense_hint as weak signal. If still no hit, fall back to tag_duration_scope_defaults.json. Upgrade/downgrade later if the same event recurs across a time window in the ingestion pipeline."
+}
